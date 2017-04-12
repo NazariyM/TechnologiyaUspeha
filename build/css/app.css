@@ -1462,6 +1462,7 @@ img {
 .nav__link {
   padding: 2px 0;
   color: #303030;
+  transition: box-shadow .25s, color .25s;
 }
 
 .nav__link:hover {
@@ -2635,7 +2636,7 @@ img {
   }
   .nav{
     position: absolute;
-    height: 100vh;
+    height: calc(100vh - 90px);
     top: 90px;
     right: 0;
     left: 0;
@@ -2651,6 +2652,7 @@ img {
     pointer-events: none;
     -ms-transform: scale(0.7);
     transform: scale(0.7);
+    overflow: hidden;
     transition: opacity .6s, transform .6s;
   }
   .nav.is-active{
@@ -2658,6 +2660,11 @@ img {
     pointer-events: all;
     -ms-transform: scale(1);
     transform: scale(1);
+  }
+  .nav.is-active .nav__item{
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
   }
   .nav__container{
     -ms-flex-direction: column;
@@ -2671,6 +2678,10 @@ img {
   }
   .nav__item{
     margin-bottom: 20px;
+    transition: transform .5s ease-in, opacity 1s;
+    -ms-transform: translateY(-100vh);
+    transform: translateY(-100vh);
+    opacity: 0;
   }
   .nav__item:last-child{
     margin-bottom: 0;
