@@ -1,0 +1,33 @@
++font("Bebas Neue Regular", BebasNeueRegular)
++font("Myriad Pro Regular", MyriadPro-Regular)
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&subset=cyrillic')
+
+=f($name, $font-size: null, $line-height: null, $letter-spacing: null, $font-weight: null)
+	$font-family: null
+	@if $name == "ub-l"
+		$font-family: "Ubuntu"
+		$font-weight: 300
+	@if $name == "ub-r"
+		$font-family: "Ubuntu"
+		$font-weight: 400
+	@if $name == "ub-b"
+		$font-family: "Ubuntu"
+		$font-weight: 700
+	@if $name == "bn-r"
+		$font-family: "Bebas Neue Regular"
+	@if $name == "tnr-r"
+		$font-family: "Times New Roman"
+		$font-weight: 400
+	@if $name == "tnr-b"
+		$font-family: "Times New Roman"
+		$font-weight: 700
+	font-family: $font-family, Arial, sans-serif
+	@if $font-family != null
+	@if $font-size != null
+		font-size: $font-size * 1px
+	@if $line-height != null
+		line-height: $line-height/$font-size
+	@if $letter-spacing != null
+		letter-spacing: ($letter-spacing / 1000) * 1em
+	@if $font-weight != null
+		font-weight: $font-weight

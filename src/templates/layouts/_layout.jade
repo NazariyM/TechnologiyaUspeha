@@ -1,0 +1,20 @@
+include _mixins
+doctype html
+html
+  head
+    include _head
+
+  body(class=bodyClass)
+    include ../bemto/bemto
+    //begin out
+    .out(class=outClass)
+
+        block content
+
+    //end out
+
+    //load scripts
+    block scripts
+      script(type="text/javascript" src="js/app.js")
+      script(type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+      //script(type="text/javascript" src="js/ymap-controls-theme.js")

@@ -1,0 +1,95 @@
+body
+	background: #FFF
+	+smooth-font
+	+f('ub-l',16,24)
+	color: $grey
+	&.is-locked
+		overflow: hidden
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+a
+	color: inherit
+	text-decoration: none
+
+img
+	display: block
+	
+.out
+	overflow: hidden
+	
+.container
+	max-width: 1200px
+	margin: 0 auto
+	padding: 0 15px
+
+.btn
+	display: inline-block
+	min-width: 186px
+	padding: 0 10px 0 10px
+	line-height: 50px
+	height: 50px
+	text-decoration: none
+	text-align: center
+	text-transform: uppercase
+	background-color: $accent
+	border-radius: 10px
+	color: #fff
+	+f('ub-b',14)
+	outline: none
+	transition: background .25s, transform .1s
+	&:hover
+		background-color: darken($accent, 10)
+	&:active
+		transform: translateY(1px)
+	&_sm
+		min-width: 164px
+		height: 30px
+		line-height: 30px
+		border-radius: 3px
+	
+.title-md
+	margin-top: 15px
+	+f('tnr-r',32,48)
+	color: #000
+	text-align: center
+	+xs
+		font-size: 24px
+		margin-top: 5px
+	+rh(642)
+		margin: 5px 0
+		line-height: 1.2
+		font-size: 28px
+
+.title-xs
+	+f('tnr-r',18)
+	color: #000
+	
+.title-decor
+	span
+		position: relative
+		&::before, &::after
+			content: ''
+			position: absolute
+			top: 55%
+			z-index: 1
+			width: 77px
+			height: 1px
+			background: $accent
+		&::before
+			left: -100px
+		&::after
+			right: -100px
+		
+.input
+	width: 100%
+	padding: 0 10px 0 30px
+	border-radius: 10px
+	border: 1px solid $accent
+	height: 45px
+	line-height: 45px
+	background-color: #ffffff
+	+f('ub-l',16)
+	color: #6d6d6d
+	+placeholder-color(#6d6d6d)

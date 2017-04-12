@@ -1,0 +1,46 @@
+//begin header
++b.HEADER.header
+  +e.container.container
+    +b.logo.header__logo
+      +e.IMG.pic(src='img/logo.svg')
+      +e.H1.title Технологии Успеха
+      +e.P.descr юридический центр
+    +b.hamburger.js-hamburger
+      +e.line
+      +e.line
+      +e.line
+    +b.contact.header__contact
+      +e.col.contact__worktime
+        +e.H3.title Режим работы
+        +e.P.descr с 8:00 до 20:00, Пн-Пт
+      +e.col.contact__mainoff
+        +e.H3.title Главный офис
+        +e.P.descr Самара, ул. Ленинская 168,
+          +e.BR
+          | оф. 111. 1 этаж
+      +e.col.contact__call
+        +e.A(href='tel:+78461234567').phone +7 (846) 123-45-67
+        +e.A(href='tel:+78461234567').phone +7 (846) 123-45-67
+
+  //begin nav
+  +b.NAV.nav.js-nav
+    +e.UL.container.container
+      +e.LI.item
+        +e.A(href='#!').link._home
+          = ' '
+          +e.SPAN Домашняя страница
+      +e.LI.item
+        +e.A(href='#!').link Юридические лица
+      +e.LI.item
+        +e.A(href='#!').link Физические лица
+      +e.LI.item
+        +e.A(href='#!').link О компании
+      +e.LI.item
+        +e.A(href='#!').link Прайс-лист
+      +e.LI.item
+        +e.A(href='#!').link Контакты
+      +e.LI.item
+        +e.A(href='#!').link._call Обратный звонок
+  //end nav
+
+//end header

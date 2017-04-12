@@ -1,0 +1,31 @@
+//begin footer
++b.FOOTER.footer
+	+e.container.container
+		+b.logo._sm.footer__logo
+			+e.IMG.pic(src='img/logo.svg')
+			+e.H2.title Технологии Успеха
+			+e.P.descr юридический центр
+
+		+b.contact.footer__contact
+				+e.col.contact__worktime
+					+e.H3.title Режим работы
+					+e.P.descr с 8:00 до 20:00, Пн-Пт
+				+e.col.contact__mainoff
+					+e.H3.title Главный офис
+					+e.P.descr Самара, ул. Ленинская 168,
+						+e.BR
+						| оф. 111. 1 этаж
+				+e.col.contact__mail
+					+e.H3.title Email:
+					+e.A(href='mailto:email@mail.ru') email@mail.ru
+				+e.col.contact__call
+					+e.A(href='tel:+78461234567').phone +7 (846) 123-45-67
+					+b.BUTTON(type='button').btn.btn_sm Обратный звонок
+
+	+e.copy
+		+e.copy-container
+			+e.copy-text © 2013-2017 Технологии успеха - юридическая помощь. Все права защищены
+			+e.copy-dev Создано руками:
+				= ' '
+				+e.EM Akticom
+//end footer

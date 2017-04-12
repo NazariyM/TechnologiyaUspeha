@@ -1,0 +1,256 @@
+---
+title: Index Page
+---
+extends layouts/_layout
+
+block content
+	+b.js-home-full
+		//begin home screen
+		+b.first-screen.section
+			include partials/_header
+
+			+b.SECTION.screen
+				+e.pic(style="background-image: url(img/content/screen-pic.jpg)")
+				+e.container.container
+					+e.slider.js-screen-slider
+						+e.slider-item
+							+e.text
+								+e.H2.title ГАРАНТИРОВАННОЕ РЕШЕНИЕ ЛЮБОГО ЮРИДИЧЕСКОГО ВОПРОСА
+								+e.P.descr Оставьте заявку и получите консультацию профессионального юриста
+									= ' '
+									+e.STRONG БЕСПЛАТНО
+							+e.form-wrap
+								+e.FORM(action='#!')
+									+e.form-inn
+										+e.form-field
+											+e.INPUT.input.input(type='text' placeholder='Имя*' name='')
+										+e.form-field
+											+e.INPUT.input.input(type='tel' placeholder='Телефон*' name='')
+										+e.form-field
+											+e.BUTTON(type='submit').btn.btn Получить консультацию
+
+						+e.slider-item
+							+e.text
+								+e.H2.title ГАРАНТИРОВАННОЕ РЕШЕНИЕ ЛЮБОГО ЮРИДИЧЕСКОГО ВОПРОСА
+								+e.P.descr Оставьте заявку и получите консультацию профессионального юриста
+									= ' '
+									+e.STRONG БЕСПЛАТНО
+							+e.form-wrap
+								+e.FORM(action='#!')
+									+e.form-inn
+										+e.form-field
+											+e.INPUT.input.input(type='text' placeholder='Имя*' name='')
+										+e.form-field
+											+e.INPUT.input.input(type='tel' placeholder='Телефон*' name='')
+										+e.form-field
+											+e.BUTTON(type='submit').btn.btn Получить консультацию
+
+					+e.adv
+						+e.adv-item
+							+e.adv-inn._mod
+								+e.SPAN.adv-count 10
+								= ' '
+								+e.SPAN.adv-text._lg лет на рынке
+						+e.adv-item
+							+e.adv-inn
+								+e.P.adv-text._lg более
+								+e.adv-count 1000
+								+e.P.adv-text довольных клиентов
+						+e.adv-item
+							+e.adv-inn
+								+e.P.adv-text._lg более
+								+e.adv-count 100
+								+e.P.adv-text услуг для физ. и юр. лиц
+				+e.icon
+
+		//end home screen
+
+		//begin services
+		+b.SECTION.services.section
+			+b.section-icon
+				+e.pic._star
+			+e.container.container
+				+b.H2.title-md Основные услуги нашей компании
+				+e.inn
+					+e.item._bg-1
+						+e.H3.item-title.title-xs Для юридических лиц
+						+e.UL.list
+							+e.LI Регистрация фирм;
+							+e.LI Ликвидация фирм;
+							+e.LI Арбитражные споры;
+							+e.LI Юридическое обслуживание;
+							+e.LI Взыскание долгов;
+							+e.LI Представительство в суде;
+							+e.LI Подготовка и составление юридических документов.
+						+e.A(href='#!').btn.btn ЗАКАЗАТЬ
+					+e.item._bg-2
+						+e.H3.item-title.title-xs Для юридических лиц
+						+e.UL.list
+							+e.LI Оформление права на недвижимое имущество;
+							+e.LI Сопровождение сделок с недвижимостью;
+							+e.LI Страховые споры;
+							+e.LI Защита прав потребителей;
+							+e.LI Возмещение ущерба при ДТП;
+							+e.LI Трудовые споры;
+							+e.LI Подготовка и составление юридических документов;
+							+e.LI Ведение наследственных дел;
+							+e.LI Земельные споры;
+							+e.LI Административные споры;
+							+e.LI Исполнительное производство;
+							+e.LI Представительство в суде.
+						+e.A(href='#!').btn.btn ЗАКАЗАТЬ
+
+				+b.SECTION.benefits
+					+e.H2.title.title-md.title-decor
+						+e.SPAN Обращаясь к нам, вы получаете:
+					+e.inn
+						+e.item
+							+e.P.descr Индивидуальный подход
+						+e.item
+							+e.P.descr Гарантия результата
+						+e.item
+							+e.P.descr Экономия средств и времени
+						+e.item
+							+e.P.descr Квалифицированные специалисты
+						+e.item
+							+e.P.descr Бесплатная консультация
+		//end services
+
+		//begin feed
+		+b.SECTION.feed.section
+			+b.section-icon
+				+e.pic._feed
+			+e.container.container
+				+b.H2.title.title-md Отзывы о нашей работе
+				+e.slider.js-feed-slider.js-img-preview
+					+e.A(href='img/content/feed_img-1.jpg' data-fancybox="feed").pic
+						+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+						+e.DIV.controls
+							+icon('icon-zoom')
+					+e.A(href='img/content/feed_img-2.jpg' data-fancybox="feed").pic
+						+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+						+e.DIV.controls
+							+icon('icon-zoom')
+					+e.A(href='img/content/feed_img-1.jpg' data-fancybox="feed").pic
+						+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+						+e.DIV.controls
+							+icon('icon-zoom')
+					+e.A(href='img/content/feed_img-2.jpg' data-fancybox="feed").pic
+						+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+						+e.DIV.controls
+							+icon('icon-zoom')
+					+e.A(href='img/content/feed_img-1.jpg' data-fancybox="feed").pic
+						+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+						+e.DIV.controls
+							+icon('icon-zoom')
+					+e.A(href='img/content/feed_img-2.jpg' data-fancybox="feed").pic
+						+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+						+e.DIV.controls
+							+icon('icon-zoom')
+					+e.A(href='img/content/feed_img-2.jpg' data-fancybox="feed").pic
+						+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+						+e.DIV.controls
+							+icon('icon-zoom')
+					+e.A(href='img/content/feed_img-2.jpg' data-fancybox="feed").pic
+						+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+						+e.DIV.controls
+							+icon('icon-zoom')
+
+				+b.clients
+					+b.section-icon
+						+e.pic._star
+					+e.H2.title.title-md Наши клиенты и партнеры
+
+					+e.slider.js-clients-slider
+						+e.item
+							+e.pic
+								+e.IMG(src='img/content/client-1.png').img
+						+e.item
+							+e.pic
+								+e.IMG(src='img/content/client-2.png').img
+						+e.item
+							+e.pic
+								+e.IMG(src='img/content/client-3.png').img
+						+e.item
+							+e.pic
+								+e.IMG(src='img/content/client-4.png').img
+						+e.item
+							+e.pic
+								+e.IMG(src='img/content/client-5.png').img
+						+e.item
+							+e.pic
+								+e.IMG(src='img/content/client-2.png').img
+						+e.item
+							+e.pic
+								+e.IMG(src='img/content/client-3.png').img
+						+e.item
+							+e.pic
+								+e.IMG(src='img/content/client-4.png').img
+
+		//end feed
+
+		//begin about company
+		+b.SECTION.about-company.section
+			+e.background(style='background-image: url(img/bg/about_bg.jpg)')
+			+b.section-icon
+				+e.pic._hammer
+			+e.container.container
+				+b.H2.title-md Немного о нашей компании
+				+e.descr
+					+e.P.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit.
+					+e.P.text Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris
+					+e.A(href='#!').btn.btn Обратиться к нам
+
+			+b.SECTION.specials
+				+e.container.container
+					+b.H2.title-md.title-decor
+						+e.SPAN Наши специалисты
+					+e.slider.js-special-slider
+						+e.item
+							+e.photo
+								+e.IMG(src='img/content/specialist.jpg')
+							+e.data
+								+e.name Константин Константинович Констонтинопольский
+								+e.position Юрист
+								+e.UL.merit
+									+e.LI.merit-item Имеет 2 высших образования по направлениям: юриспруденция и финансы и кредит.
+									+e.LI.merit-item Специалист в области защиты прав потребителей.
+									+e.LI.merit-item Опыт работы более 10 лет.
+						+e.item
+							+e.photo
+								+e.IMG(src='img/content/specialist.jpg')
+							+e.data
+								+e.name Константин Константинович Констонтинопольский
+								+e.position Юрист
+								+e.UL.merit
+									+e.LI.merit-item Имеет 2 высших образования по направлениям: юриспруденция и финансы и кредит.
+									+e.LI.merit-item Специалист в области защиты прав потребителей.
+									+e.LI.merit-item Опыт работы более 10 лет.
+
+		//end about company
+
+		//begin story
+		+b.SECTION.story.section
+			+b.section-icon
+				+e.pic._university
+			+e.container.container
+				+b.H2.title-md Юридические услуги в Самаре
+				+e.inn
+					+e.col
+						+e.IMG(src='img/content/story_img.jpg').img
+					+e.col
+						+e.P.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra.
+						+e.P.text Pellentesquearcu mauris, malesuada quis ornare accumsan, blandit sed diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+		//end story
+
+		//begin location
+		+b.last-screen.section
+			+b.SECTION.location
+				+e.label
+					+b.section-icon
+						+e.pic._location
+					+e.title.title-md МЫ РАСПОЛОЖЕНЫ:
+				+e.map-wrap
+					+e.map#js-home-map
+			include partials/_footer
+		//end location
