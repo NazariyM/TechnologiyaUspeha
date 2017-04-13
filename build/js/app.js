@@ -5205,36 +5205,29 @@ $(function () {
 
 	// home map
 	(function () {
-		var myMap, myPlacemark;
+		var myMap, locBalloon;
 		ymaps.ready(init);
 
 		function init() {
 			myMap = new ymaps.Map('js-home-map', {
-				center: [53.188496298829286, 50.15371174915307],
+				center: [53.19335487770168, 50.1536473761367],
 				zoom: 14
-			}), myPlacemark = new ymaps.Placemark([53.19480611857074, 50.1113521604379], {
-				hintContent: 'Технологии Успеха',
-				iconContent: 'Ленинская улица 168'
-			}, {
-				iconLayout: 'default#imageWithContent',
-				iconImageHref: 'img/logo.svg',
-				iconImageSize: [43, 28],
-				iconImageOffset: [-5, -38]
 			});
 
-			myMap.geoObjects.add(myPlacemark);
+			locBalloon = new ymaps.Balloon(myMap);
+			locBalloon.options.setParent(myMap.options);
+			myMap.balloon.open([53.19480611857074, 50.1113521604379], {
+				contentBody: '<div class="location__balloon"><div class="location__balloon-logo"><img src="img/logo.svg"></div> <div class="location__balloon-text">Ленинская улица 168</div></div>'
+			}, {
+				closeButton: false,
+				autoPan: true
+			});
+
 			myMap.behaviors.disable('scrollZoom');
 			myMap.controls.remove('searchControl');
 			myMap.controls.remove('trafficControl');
 			myMap.controls.remove('typeSelector');
 			myMap.controls.remove('fullscreenControl');
-
-			// var geolocationControl = new ymaps.control.GeolocationControl({
-			// 	options: {
-			// 		layout: 'round#buttonLayout'
-			// 	}
-			// });
-			// myMap.controls.add(geolocationControl);
 		}
 	})();
 

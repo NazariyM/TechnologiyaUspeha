@@ -234,7 +234,6 @@
 	position: relative
 	border-top: 1px solid rgba(#5facae, .3)
 	height: calc(100vh - 190px)
-	//min-height: 510px
 	+rh(700)
 		min-height: calc(100vh - 157px)
 	+sm
@@ -254,9 +253,6 @@
 		z-index: 1
 		+md
 			max-width: 920px
-		+sm
-			//justify-content: flex-start
-			//margin-top: -45px
 		+rhmin(850)
 			margin-top: -250px
 		+xs
@@ -275,8 +271,6 @@
 		+xs
 			background-size: cover
 			background-position: 20% 50%
-		+rhmin(830)
-			background-size: 340% 100%
 	&__slider
 		width: 100%
 		padding: 0 30px
@@ -348,18 +342,22 @@
 		margin: 0 auto 15px
 		font-weight: 300
 		font-size: 32px
-		//+rh(700)
-			line-height: 1.2
 		+sm
 			font-size: 28px
 		+xs
 			padding: 0 10px
 			font-size: 20px
 			color: #000
+		+rh(570)
+			line-height: 1.1
+			margin: 0 auto
+			font-size: 20px
 	&__form-wrap
 		margin: 55px 0 75px
 		+rh(700)
 			margin: 15px 0
+		+rh(570)
+			margin: 5px 0
 		+sm
 			margin: 30px 0 0
 		+xs
@@ -378,6 +376,8 @@
 			padding: 0 20px
 	&__form-field
 		flex-basis: (202/1068 * 100%)
+		+rh(570)
+			margin-bottom: 5px
 		+md
 			flex-basis: 25%
 		+sm
@@ -386,6 +386,10 @@
 			margin-left: 15px
 			+sm
 				margin-left: 0
+		input
+			+rh(570)
+				line-height: 35px
+				height: 35px
 	&__btn
 		min-width: 256px
 		height: 45px
@@ -481,7 +485,7 @@
 		overflow: hidden
 		background: #f2e8df no-repeat 100% 0
 		z-index: 1
-		+rh(700)
+		+rh(800)
 			padding: 15px 10px 10px 30px
 		+md
 			padding: 30px 10px 10px 20px
@@ -521,10 +525,8 @@
 	&__list
 		padding-left: 25px
 		color: #000
-		+rh(642)
-			margin-bottom: -50px !important
-		@media screen and (max-width: 1023px), screen and (max-height: 800px)
-			margin: 0!important
+		+rh(700)
+			margin-bottom: -50px
 		li
 			position: relative
 			font-size: 14px
@@ -543,7 +545,7 @@
 		align-self: flex-end
 		margin-top: auto
 		+xs
-			margin-top: 15px
+			margin-top: 55px
 
 /* benefits
 	----------------------------------- */
@@ -566,7 +568,7 @@
 		line-height: 1.5
 		+sm
 			flex-basis: auto
-		+rh(700)
+		+rh(800)
 			min-height: 110px
 		&:first-child
 			margin-left: 0
@@ -861,15 +863,17 @@
 		left: 50%
 		z-index: 2
 		padding: 25px 20px 20px
-		max-width: 600px
-		width: 100%
+		width: 32%
 		transform: translateX(-50%)
 		background-color: #fff
 		+md
 			padding: 15px 0 5px
-			max-width: 400px
+		+sm
+			padding: 5px!important
+			width: 45%
 		+xs
-			padding: 5px 0
+			width: 75%
+			padding: 5px 0 0!important
 		+rh(700)
 			padding: 5px
 	&__title
@@ -878,8 +882,10 @@
 			margin: 10px 0
 		+md
 			margin: 10px 0
+		+sm
+			margin: 5px!important
 		+xs
-			margin: 0
+			font-size: 19px
 	&__map-wrap
 		position: relative
 	&__map
@@ -888,6 +894,40 @@
 			height: calc(100vh - 165px)
 		+xs
 			height: 500px
+	&__balloon
+		min-width: 300px
+		display: flex
+		align-items: center
+	&__balloon-logo
+		position: relative
+		width: 61px
+		height: 61px
+		border-radius: 50%
+		background-color: #fff
+		img
+			width: 43px
+			height: 28px
+			position: absolute
+			top: 15px
+			left: 50%
+			transform: translateX(-50%)
+	&__balloon-text
+		margin-left: -12px
+		+f('ub-r',15)
+		padding: 6px 10px 6px 20px
+		border-radius: 0 15px 15px 0
+		background-color: rgba(#fff, .85)
+
+
+.ymaps-2-1-50-balloon
+	box-shadow: none!important
+.ymaps-2-1-50-balloon__content
+	background-color: transparent!important
+.ymaps-2-1-50-balloon__layout
+	display: flex
+	background-color: transparent!important
+.ymaps-2-1-50-balloon__tail
+	display: none!important
 
 /* footer
 	----------------------------------- */
