@@ -34,7 +34,13 @@ $(function () {
 		cssEase: 'ease-in-out',
 		useTransform: true,
 		prevArrow: '<button type="button" class="screen__arrow screen__arrow-prev"><svg class="arrow-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld"></use></svg></button>',
-		nextArrow: '<button type="button" class="screen__arrow screen__arrow-next"><svg class="arrow-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld"></use></svg></button>'
+		nextArrow: '<button type="button" class="screen__arrow screen__arrow-next"><svg class="arrow-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld"></use></svg></button>',
+		responsive: [{
+			breakpoint: 767,
+			settings: {
+				swipe: false
+			}
+		}]
 	});
 
 	$('.js-feed-slider').slick({
@@ -105,7 +111,13 @@ $(function () {
 		cssEase: 'ease-in-out',
 		useTransform: true,
 		prevArrow: '<button type="button" class="screen__arrow screen__arrow-prev"><svg class="arrow-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld"></use></svg></button>',
-		nextArrow: '<button type="button" class="screen__arrow screen__arrow-next"><svg class="arrow-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld"></use></svg></button>'
+		nextArrow: '<button type="button" class="screen__arrow screen__arrow-next"><svg class="arrow-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld"></use></svg></button>',
+		responsive: [{
+			breakpoint: 767,
+			settings: {
+				swipe: false
+			}
+		}]
 	});
 
 	// init fancybox
